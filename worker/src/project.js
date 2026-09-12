@@ -3,22 +3,22 @@ export const SOURCE_URL = "https://github.com/xepes0/wloc/tree/main";
 export const MODULE_LINKS = [
   {
     "name": "Surge / Egern",
-    "url": "https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.sgmodule"
+    "url": "https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.sgmodule"
   },
   {
     "name": "Quantumult X",
-    "url": "https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.conf"
+    "url": "https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.conf"
   },
   {
     "name": "Loon",
-    "url": "https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.lpx"
+    "url": "https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.lpx"
   },
   {
     "name": "Stash",
-    "url": "https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride"
+    "url": "https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.stoverride"
   },
   {
     "name": "Shadowrocket",
-    "url": "https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module"
+    "url": "https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.module"
   }
 ];
