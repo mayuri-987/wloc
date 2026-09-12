@@ -1,6 +1,6 @@
 <p align="center"><img src="wloc.jpg" width="144" alt="WLOC 图标" /></p>
 
-# WLOC 社区维护版
+# WLOC 自用
 
 基于 Yu9191/wloc 恢复的 Apple 网络定位修改工具。通过 Surge、Quantumult X、Loon、Stash 或 Shadowrocket 拦截 Wi-Fi/基站定位响应，配合网页选点和本地持久化存储使用。
 
@@ -13,15 +13,15 @@
 <!-- subscriptions:start -->
 | 客户端 | 订阅地址 |
 | --- | --- |
-| Surge / Egern | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.sgmodule](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.sgmodule) |
-| Quantumult X | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.conf](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.conf) |
-| Loon | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.lpx](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.lpx) |
-| Stash | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride) |
-| Shadowrocket | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module) |
+| Surge / Egern | [https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.sgmodule](https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.sgmodule) |
+| Quantumult X | [https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.conf](https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.conf) |
+| Loon | [https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.lpx](https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.lpx) |
+| Stash | [https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.stoverride](https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.stoverride) |
+| Shadowrocket | [https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.module](https://raw.githubusercontent.com/mayuri-987/wloc/refs/heads/main/modules/wloc.module) |
 
-选点页面：[https://wloc.333012.xyz/](https://wloc.333012.xyz/)。
+选点页面：[https://wloc.neuro.qzz.io/](https://wloc.neuro.qzz.io/)。
 
-[浏览源码](https://github.com/xepes0/wloc) · [部署到 Cloudflare Workers](https://deploy.workers.cloudflare.com/?url=https://github.com/xepes0/wloc/tree/main/worker)
+[浏览源码](https://github.com/mayuri-987/wloc) · [部署到 Cloudflare Workers](https://deploy.workers.cloudflare.com/?url=https://github.com/mayuri-987/wloc/tree/main/worker)
 <!-- subscriptions:end -->
 
 Egern 沿用上游 Surge 模块兼容说明，尚未单独复核。Stash 使用原生 `.stoverride`。
@@ -103,33 +103,4 @@ WLOC 响应 → dist/wloc.js 读取配置并修改返回坐标
 
 优先级：页面保存的坐标 > 模块参数 > 默认值。QX 可在网页设置扰动半径，其余客户端也可修改模块参数。保留上游协议路径、域名匹配和持久化键，便于旧用户迁移。
 
-## 开发与维护
-
-```sh
-npm --prefix worker ci
-npm run check
-npm test
-npm run build:check
-npm run pages:build
-```
-
-`npm test` 同时执行 `.test.mjs` 和 `.test.js`，包括上游曾被默认命令漏掉的 Stash 测试。构建检查仅产出本地文件，不会部署。
-
-提交方式见 [CONTRIBUTING.md](CONTRIBUTING.md)；恢复来源和缺失内容见[来源记录](docs/PROVENANCE.md)；待处理问题、发布步骤及真机验证清单见[维护说明](docs/MAINTENANCE.md)。
-
-## 致谢
-
-- [proxypin-wloc-spoofer](https://github.com/FFF686868/proxypin-wloc-spoofer) - 原始 WLOC 定位修改思路 by FFF686868
-- [NSNanoCat/Util](https://github.com/NSNanoCat/util) - 跨平台脚本工具框架
-
-### 贡献者
-
-- [@YmlyZA](https://github.com/YmlyZA) - 百度地图支持、港澳台边界处理、GCJ 换算优化、回归测试覆盖 ([#83](https://github.com/Yu9191/wloc/pull/83))
-- [@YeTianXingShi](https://github.com/YeTianXingShi) - randomRadius 随机坐标扰动功能原始实现 ([#70](https://github.com/Yu9191/wloc/pull/70))
-- [@SajoLuo](https://github.com/SajoLuo) - Stash 响应格式修复 ([#66](https://github.com/Yu9191/wloc/pull/66))
-- [@SkywardLab](https://github.com/SkywardLab) - 扩展 WLOC 备用域名拦截 ([#90](https://github.com/Yu9191/wloc/pull/90))
-- [@beiming0000](https://github.com/beiming0000) - 逗号小数格式坐标丢失问题报告 ([#96](https://github.com/Yu9191/wloc/issues/96))
-
-## 许可证
-
-保留上游 [AGPL-3.0 许可证](LICENSE)、作者署名及贡献记录。原 README 还包含关于商业产品和应用商店的额外声明，原文及其与标准许可证的区别见 [NOTICE.md](NOTICE.md)。本次整理未改写 LICENSE，也未完成第三方打包组件的完整许可证审计。
+自用，无著作权
