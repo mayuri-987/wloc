@@ -1,6 +1,6 @@
 <p align="center"><img src="wloc.jpg" width="144" alt="WLOC 图标" /></p>
 
-# WLOC 自用
+# WLOC 自用，无著作权
 
 基于 Yu9191/wloc 恢复的 Apple 网络定位修改工具。通过 Surge、Quantumult X、Loon、Stash 或 Shadowrocket 拦截 Wi-Fi/基站定位响应，配合网页选点和本地持久化存储使用。
 
